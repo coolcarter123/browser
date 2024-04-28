@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vortex Browser</title>
+	<style>
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		.buttons {
+			text-align: center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Vortex Browser</h1>
+	<div class="buttons">
+		<button onclick="goBack()">Undo</button>
+		<button onclick="goForward()">Redo</button>
+		<button onclick="location.reload()">Refresh</button>
+	</div>
+	<iframe id="browser" src="https://www.google.com" style="width:100%; height:600px;"></iframe>
+
+	<script>
+		function goBack() {
+			window.history.back();
+	
